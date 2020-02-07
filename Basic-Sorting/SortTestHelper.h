@@ -8,7 +8,7 @@ using namespace std;
 
 namespace SortTestHelper {
 
-	//生成具有n个元素的随机数组，每个元素的范围为[rangeL,rangeR]
+	//鐢熸垚鍏锋湁n涓厓绱犵殑闅忔満鏁扮粍锛屾瘡涓厓绱犵殑鑼冨洿涓篬rangeL,rangeR]
 	int* generateRandomArray(int n, int rangeL,int rangeR) {
 		assert(rangeL <= rangeR);
 		int *arr = new int[n];
