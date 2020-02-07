@@ -23,7 +23,7 @@ void shellSort1(T arr[], int n) {
 template<typename T>
 void shellSort2(T arr[], int n) {
 
-	// ¼ÆËã increment sequence: 1, 4, 13, 40, 121, 364, 1093...
+	// è®¡ç®— increment sequence: 1, 4, 13, 40, 121, 364, 1093...
 	int h = 1;
 	while (h < n / 3)
 		h = 3 * h + 1;
@@ -33,7 +33,7 @@ void shellSort2(T arr[], int n) {
 		// h-sort the array
 		for (int i = h; i < n; i++) {
 
-			// ¶Ô arr[i], arr[i-h], arr[i-2*h], arr[i-3*h]... Ê¹ÓÃ²åÈëÅÅÐò
+			// å¯¹ arr[i], arr[i-h], arr[i-2*h], arr[i-3*h]... ä½¿ç”¨æ’å…¥æŽ’åº
 			T e = arr[i];
 			int j;
 			for (j = i; j >= h && e < arr[j - h]; j -= h)
@@ -49,7 +49,7 @@ int main() {
 
 	int n = 10000;
 
-	// ²âÊÔ1 Ò»°ã²âÊÔ
+	// æµ‹è¯•1 ä¸€èˆ¬æµ‹è¯•
 	cout << "Test for random array, size = " << n << ", random range [0, " << n << "]" << endl;
 
 	int *arr1 = SortTestHelper::generateRandomArray(n, 0, n);
@@ -71,7 +71,7 @@ int main() {
 	cout << endl;
 
 
-	// ²âÊÔ2 ²âÊÔ½üºõÓÐÐòµÄÊý×é
+	// æµ‹è¯•2 æµ‹è¯•è¿‘ä¹Žæœ‰åºçš„æ•°ç»„
 	int swapTimes = 100;
 
 	cout << "Test for nearly ordered array, size = " << n << ", swap time = " << swapTimes << endl;
