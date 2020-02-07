@@ -8,7 +8,7 @@ using namespace std;
 template<typename T>
 void selectionSort1(T arr[], int n) {
 	for (int i = 0; i < n; i++) {
-		//Ñ°ÕÒ(i,n)Çø¼äÀïµÄ×îÐ¡Öµ
+		//å¯»æ‰¾(i,n)åŒºé—´é‡Œçš„æœ€å°å€¼
 		int minIndex = i;
 		for (int j = i + 1; j < n; j++) {
 			if (arr[j] < arr[minIndex])
@@ -18,14 +18,14 @@ void selectionSort1(T arr[], int n) {
 	}
 }
 
-//¿ÉÒÔÔÚÃ¿Ò»ÂÖÑ­»·ÖÐÍ¬Ê±ÕÒµ½µ±Ç°Êý¾ÝµÄ×î´óÖµºÍ×îÐ¡Öµ
+//å¯ä»¥åœ¨æ¯ä¸€è½®å¾ªçŽ¯ä¸­åŒæ—¶æ‰¾åˆ°å½“å‰æ•°æ®çš„æœ€å¤§å€¼å’Œæœ€å°å€¼
 template<typename T>
 void selectionSort2(T arr[], int n) {
 	int left = 0, right = n - 1;
 	while (left < right) {
 		int minIndex = left;
 		int maxIndex = right;
-		// ÔÚÃ¿Ò»ÂÖ²éÕÒÊ±, Òª±£Ö¤arr[minIndex] <= arr[maxIndex]
+		// åœ¨æ¯ä¸€è½®æŸ¥æ‰¾æ—¶, è¦ä¿è¯arr[minIndex] <= arr[maxIndex]
 		if (arr[minIndex] > arr[maxIndex])
 			swap(arr[minIndex], arr[maxIndex]);
 
